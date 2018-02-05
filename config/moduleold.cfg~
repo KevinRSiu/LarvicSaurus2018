@@ -1,0 +1,76 @@
+TacticsAmbulanceTeam.HumanDetector : adf.sample.module.complex.SampleHumanDetector
+TacticsAmbulanceTeam.Search : adf.sample.module.complex.SampleSearch
+
+TacticsAmbulanceTeam.ActionTransport : adf.sample.extaction.ActionTransport
+TacticsAmbulanceTeam.ActionExtMove : adf.sample.extaction.ActionExtMove
+
+TacticsAmbulanceTeam.CommandExecutorAmbulance : adf.sample.centralized.CommandExecutorAmbulance
+TacticsAmbulanceTeam.CommandExecutorScout : adf.sample.centralized.CommandExecutorScout
+
+
+TacticsFireBrigade.BuildingDetector : adf.sample.module.complex.SampleBuildingDetector
+TacticsFireBrigade.Search : adf.sample.module.complex.SampleSearch
+
+TacticsFireBrigade.ActionFireFighting : adf.sample.extaction.ActionFireFighting
+TacticsFireBrigade.ActionExtMove : adf.sample.extaction.ActionExtMove
+
+TacticsFireBrigade.CommandExecutorFire : adf.sample.centralized.CommandExecutorFire
+TacticsFireBrigade.CommandExecutorScout : adf.sample.centralized.CommandExecutorScout
+
+TacticsPoliceForce.RoadDetector : adf.sample.module.complex.SampleRoadDetector
+TacticsPoliceForce.Search : adf.sample.module.complex.SampleSearch
+
+TacticsPoliceForce.ActionExtClear : adf.sample.extaction.ActionExtClear
+TacticsPoliceForce.ActionExtMove : adf.sample.extaction.ActionExtMove
+
+TacticsPoliceForce.CommandExecutorPolice : adf.sample.centralized.CommandExecutorPolice
+TacticsPoliceForce.CommandExecutorScout : adf.sample.centralized.CommandExecutorScoutPolice
+
+
+SampleBuildingDetector.Clustering : larvicsaurus.algorithm.clustering.KMeans
+SampleRoadDetector.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+SampleHumanDetector.Clustering : larvicsaurus.algorithm.clustering.KMeans
+
+
+SampleSearch.PathPlanning.Ambulance : larvicsaurus.algorithm.AStarPathPlanning
+SampleSearch.Clustering.Ambulance : larvicsaurus.algorithm.clustering.KMeans
+SampleSearch.PathPlanning.Fire : larvicsaurus.algorithm.AStarPathPlanning
+SampleSearch.Clustering.Fire : larvicsaurus.algorithm.clustering.KMeans
+SampleSearch.PathPlanning.Police : larvicsaurus.algorithm.AStarPathPlanning
+SampleSearch.Clustering.Police : larvicsaurus.algorithm.clustering.KMeans
+
+
+ActionExtClear.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+ActionExtMove.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+ActionFireFighting.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+ActionTransport.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+
+
+CommandExecutorAmbulance.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+
+CommandExecutorAmbulance.ActionTransport : adf.sample.extaction.ActionTransport
+CommandExecutorAmbulance.ActionExtMove : adf.sample.extaction.ActionExtMove
+
+CommandExecutorFire.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+
+CommandExecutorFire.ActionFireFighting : adf.sample.extaction.ActionFireFighting
+CommandExecutorFire.ActionExtMove : adf.sample.extaction.ActionExtMove
+
+CommandExecutorPolice.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+
+CommandExecutorPolice.ActionExtClear : adf.sample.extaction.ActionExtClear
+CommandExecutorPolice.ActionExtMove : adf.sample.extaction.ActionExtMove
+
+CommandExecutorScout.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+
+CommandExecutorScoutPolice.PathPlanning : larvicsaurus.algorithm.AStarPathPlanning
+CommandExecutorScoutPolice.ActionExtClear : adf.sample.extaction.ActionExtClear
+
+TacticsAmbulanceCentre.TargetAllocator : adf.sample.module.complex.SampleAmbulanceTargetAllocator
+TacticsAmbulanceCentre.CommandPicker : adf.sample.centralized.CommandPickerAmbulance
+
+TacticsFireStation.TargetAllocator : adf.sample.module.complex.SampleFireTargetAllocator
+TacticsFireStation.CommandPicker : adf.sample.centralized.CommandPickerFire
+
+TacticsPoliceOffice.TargetAllocator : adf.sample.module.complex.SamplePoliceTargetAllocator
+TacticsPoliceOffice.CommandPicker : adf.sample.centralized.CommandPickerPolice
